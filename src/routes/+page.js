@@ -1,3 +1,9 @@
-// since there's no dynamic data here, we can prerender
-// it so that it gets served as a static asset in production
-export const prerender = true;
+export const load = async () => {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/1`);
+    const responsBody = await response.json();
+    console.log(responsBody);
+
+    return {
+        name: responsBody.name
+    };
+};

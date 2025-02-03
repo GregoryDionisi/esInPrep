@@ -1,4 +1,9 @@
+<script>
+    export let data;
+</script>
 
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
+<h1>My Blog</h1>
+
+<ul>
+    <li>{data.name}</li>
+</ul>
